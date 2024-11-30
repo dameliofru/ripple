@@ -7,7 +7,7 @@ import { connectToDatabase } from "../database/mongoose";
 import { handleError } from "../utils";
 
 // CREATE
-export async function createUser(user: CreateUserParams) {
+export async function createUser(user: CreateUserParams ) {
   try {
     await connectToDatabase();
 
@@ -35,7 +35,7 @@ export async function getUserById(userId: string) {
 }
 
 // UPDATE
-export async function updateUser(clerkId: string, user: UpdateUserParams) {
+export async function updateUser(clerkId: string, user: UpdateUserParams ) {
   try {
     await connectToDatabase();
 
@@ -91,4 +91,3 @@ export async function updateCredits(userId: string, creditFee: number) {
     handleError(error);
   }
 }
-
